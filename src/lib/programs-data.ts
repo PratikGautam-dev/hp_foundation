@@ -95,7 +95,7 @@ export const PROGRAMS_DATA: Record<string, Program> = {
             { amount: 10000, description: ['Medical equipment for the facility'] }
         ]
     },
-    'childrens-welfare': {
+    'children-welfare': {
         id: 'children',
         title: "Children's Welfare Program",
         tagline: 'Empowering young minds through education, healthcare, and mentorship',
@@ -145,7 +145,7 @@ export const PROGRAMS_DATA: Record<string, Program> = {
             { amount: 5000, description: ['Education, healthcare, and nutrition for 6 months'] }
         ]
     },
-    'womens-empowerment': {
+    'women-empowerment': {
         id: 'women',
         title: "Women's Empowerment Program",
         tagline: 'Equipping women with skills, education, and resources for independence',

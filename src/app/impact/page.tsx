@@ -83,42 +83,62 @@ export default function ImpactPage() {
                 </div>
             </section>
 
-            {/* Stories Section - Reusing Component */}
-            <Stories />
-
-            {/* Financial Transparency */}
+            {/* Fund Utilization Section - Updated from Image */}
             <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4 md:px-8 max-w-5xl">
-                    <div className="bg-gray-900 rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden">
+                    <div className="bg-gray-900 rounded-3xl p-8 md:p-16 text-white relative overflow-hidden">
                         {/* Decorative background */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-primary-orange/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                         <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-red/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
                         <div className="relative z-10">
-                            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6">Financial Transparency</h2>
-                            <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
-                                We believe in complete transparency. Every rupee you donate is accounted for and utilized efficiently to maximize impact.
-                            </p>
+                            <div className="text-center mb-10">
+                                <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Fund Utilization</h2>
+                                <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                                    We believe in complete transparency. Here is a detailed breakdown of how we allocate our resources.
+                                </p>
+                            </div>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10">
-                                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10">
-                                    <div className="text-4xl font-bold text-primary-orange mb-2">92%</div>
-                                    <div className="text-gray-300">Program Expenditure</div>
+                            <div className="bg-white/10 backdrop-blur-md rounded-xl overflow-hidden border border-white/10 mb-10">
+                                <div className="grid grid-cols-2 bg-white/20 p-4 font-bold text-lg">
+                                    <div className="pl-4">Category</div>
+                                    <div className="text-right pr-4">Amount (₹)</div>
                                 </div>
-                                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10">
-                                    <div className="text-4xl font-bold text-secondary-green mb-2">8%</div>
-                                    <div className="text-gray-300">Admin & Fundraising</div>
+                                <div className="divide-y divide-white/10">
+                                    {[
+                                        { category: "Elderly Care Facility Setup", amount: "5,000,000" },
+                                        { category: "Children's Welfare Programs", amount: "3,000,000" },
+                                        { category: "Women Empowerment Initiatives", amount: "2,000,000" },
+                                        { category: "Community Outreach & Awareness", amount: "1,500,000" },
+                                        { category: "Operational Costs", amount: "2,500,000" },
+                                        { category: "Digital Infrastructure", amount: "1,000,000" },
+                                        { category: "Miscellaneous & Contingencies", amount: "500,000" },
+                                    ].map((row, idx) => (
+                                        <div key={idx} className="grid grid-cols-2 p-4 text-gray-200 hover:bg-white/5 transition-colors">
+                                            <div className="pl-4">{row.category}</div>
+                                            <div className="text-right pr-4 font-mono">{row.amount}</div>
+                                        </div>
+                                    ))}
+                                    <div className="grid grid-cols-2 p-4 font-bold text-xl bg-primary-orange/20 text-white">
+                                        <div className="pl-4">Total</div>
+                                        <div className="text-right pr-4">15,000,000</div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 gap-2 px-8 py-6 rounded-full text-lg font-semibold bg-transparent">
-                                <Download size={20} />
-                                Download Annual Report 2024
-                            </Button>
+                            <div className="text-center">
+                                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 gap-2 px-8 py-6 rounded-full text-lg font-semibold bg-transparent">
+                                    <Download size={20} />
+                                    Download Annual Report 2024
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {/* Stories Section - Reusing Component */}
+            <Stories />
 
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-br from-primary-orange to-primary-red text-white">

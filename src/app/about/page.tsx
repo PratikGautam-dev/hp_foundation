@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Heart, Shield, Users, Lightbulb, ArrowRight, Quote, School, Stethoscope, Briefcase } from 'lucide-react';
+import { Heart, Shield, Users, Lightbulb, ArrowRight, Quote, School, Stethoscope, Briefcase, MapPin, BarChart3, Globe, Handshake, LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function AboutPage() {
@@ -138,48 +138,46 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* From Image: Challenges */}
-            <section className="py-16 md:py-24 bg-gray-900 text-white">
-                <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                            <Image
-                                src="https://images.unsplash.com/photo-1549488497-69b76cc5c229?q=80&w=800&fit=crop"
-                                alt="Rural challenges"
-                                fill
-                                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                            <div className="absolute bottom-6 left-6 right-6">
-                                <p className="text-white/80 italic">"Many senior citizens in rural areas face neglect... Underprivileged children often lack access..."</p>
-                            </div>
-                        </div>
+            {/* Aim to Scale Up Section (New from Image) */}
+            <section className="py-16 md:py-24 bg-primary-red text-white relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                <div className="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+                    <div className="text-center mb-16">
+                        <h2 className="font-heading font-bold text-3xl md:text-5xl mb-6">Aim to Scale Up</h2>
+                        <div className="w-24 h-1.5 bg-white mx-auto rounded-full mb-8"></div>
+                    </div>
 
-                        <div className="space-y-8">
-                            <div>
-                                <h2 className="font-heading font-bold text-3xl md:text-5xl mb-6">Challenges We Address</h2>
-                                <div className="w-24 h-1.5 bg-primary-orange rounded-full mb-8"></div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {[
+                            {
+                                title: "Expand Geographic Reach",
+                                desc: "Extend our services beyond Samastipur to other rural and semi-urban areas in Bihar and neighboring states, targeting more vulnerable communities.",
+                                icon: MapPin
+                            },
+                            {
+                                title: "Increase Program Offerings",
+                                desc: "Introduce additional services such as vocational training centers, mobile healthcare units, and specialized programs for disabled individuals.",
+                                icon: BarChart3
+                            },
+                            {
+                                title: "Strengthen Digital Infrastructure",
+                                desc: "Build a stronger online platform to reach a larger audience, enabling remote donations, virtual events, and expanding our volunteer base.",
+                                icon: Globe
+                            },
+                            {
+                                title: "Forge Strategic Partnerships",
+                                desc: "Collaborate with larger NGOs, government bodies, and corporates to amplify our resources, gain funding, and enhance the scale of our programs.",
+                                icon: Handshake
+                            }
+                        ].map((item, idx) => (
+                            <div key={idx} className="text-center">
+                                <div className="w-24 h-24 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-6 border-4 border-white/20">
+                                    <item.icon size={40} className="text-white" />
+                                </div>
+                                <h3 className="font-bold text-xl mb-3">{item.title}</h3>
+                                <p className="text-white/80 text-sm leading-relaxed">{item.desc}</p>
                             </div>
-
-                            <div className="space-y-6">
-                                {[
-                                    { title: "Lack of Elderly Care", desc: "Many senior citizens in rural areas face neglect and lack proper care, leading to isolation and poor quality of life." },
-                                    { title: "Limited Access to Education", desc: "Underprivileged children often lack access to quality education, hindering their future opportunities." },
-                                    { title: "Health Inequality", desc: "Marginalized communities, especially children, suffer from inadequate healthcare services and nutrition." },
-                                    { title: "Gender Inequality", desc: "Women in rural areas face barriers in education, employment, and social rights, limiting their empowerment." }
-                                ].map((challenge, idx) => (
-                                    <div key={idx} className="flex gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-white/10 flex-shrink-0 flex items-center justify-center text-primary-orange font-bold">
-                                            {idx + 1}
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-xl mb-1">{challenge.title}</h3>
-                                            <p className="text-gray-400 leading-relaxed">{challenge.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -191,7 +189,7 @@ export default function AboutPage() {
                         <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Our Solutions</h2>
                         <div className="w-24 h-1.5 bg-gradient-to-r from-primary-orange to-primary-red mx-auto rounded-full"></div>
                         <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
-                            We implement targeted programs to address these challenges head-on.
+                            We implement targeted programs to address challenges head-on.
                         </p>
                     </div>
 
@@ -242,7 +240,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Team Section - Kept shorter or moved to bottom */}
+            {/* Founder Profile Section - Expanded from Image */}
             <section className="py-16 md:py-24 bg-gray-50">
                 <div className="container mx-auto px-4 md:px-8 max-w-6xl">
                     <div className="text-center mb-16">
@@ -250,47 +248,58 @@ export default function AboutPage() {
                         <div className="w-24 h-1.5 bg-gradient-to-r from-primary-orange to-primary-red mx-auto rounded-full"></div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                    <div className="space-y-12">
                         {/* Founder */}
-                        <motion.div
-                            whileHover={{ y: -5 }}
-                            className="bg-white rounded-2xl overflow-hidden shadow-lg"
-                        >
-                            <div className="relative h-80 w-full">
+                        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100 flex flex-col md:flex-row gap-10 items-center md:items-start">
+                            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shrink-0 border-4 border-orange-100 shadow-md">
                                 <Image
                                     src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&fit=crop"
                                     alt="Akshita Singh"
-                                    fill
-                                    className="object-cover"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-full"
                                 />
                             </div>
-                            <div className="p-8 text-center">
-                                <h3 className="font-heading font-bold text-2xl text-gray-900 mb-1">Akshita Singh</h3>
-                                <p className="text-primary-orange font-medium mb-4">Founder</p>
+                            <div className="flex-grow text-center md:text-left">
+                                <h3 className="font-heading font-bold text-2xl md:text-3xl text-gray-900">Akshita Singh</h3>
+                                <p className="text-primary-orange font-medium mb-4 uppercase tracking-wider text-sm">Founder & Director</p>
+                                <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                                    Akshita Singh is the founder and director of Hira Prasad Welfare Foundation, based in Samastipur, Bihar. With a strong educational background and a deep passion for social change, she is dedicated to uplifting marginalized communities, particularly the elderly, children, and women.
+                                </p>
+                                <p className="text-gray-600 leading-relaxed text-lg">
+                                    Akshita has hands-on experience in organizing and leading welfare programs, focusing on providing education, healthcare, and empowerment opportunities to vulnerable populations. Her vision is to create an inclusive society where every individual, regardless of age, gender, or background, can live a dignified and fulfilling life.
+                                </p>
                             </div>
-                        </motion.div>
+                        </div>
 
                         {/* Co-Founder */}
-                        <motion.div
-                            whileHover={{ y: -5 }}
-                            className="bg-white rounded-2xl overflow-hidden shadow-lg"
-                        >
-                            <div className="relative h-80 w-full">
+                        <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100 flex flex-col md:flex-row-reverse gap-10 items-center md:items-start">
+                            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shrink-0 border-4 border-blue-100 shadow-md">
                                 <Image
                                     src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&fit=crop"
                                     alt="Ankit Raj"
-                                    fill
-                                    className="object-cover"
+                                    width={400}
+                                    height={400}
+                                    className="object-cover w-full h-full"
                                 />
                             </div>
-                            <div className="p-8 text-center">
-                                <h3 className="font-heading font-bold text-2xl text-gray-900 mb-1">Ankit Raj</h3>
-                                <p className="text-primary-orange font-medium mb-4">Co-Founder</p>
+                            <div className="flex-grow text-center md:text-left">
+                                <h3 className="font-heading font-bold text-2xl md:text-3xl text-gray-900">Ankit Raj</h3>
+                                <p className="text-secondary-blue font-medium mb-4 uppercase tracking-wider text-sm">Co-Founder</p>
+                                <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                                    Ankit Raj is a dedicated professional with a strong passion for making a positive impact in his field. He brings a fresh perspective and leadership to every project he works on, with a focus on innovation and growth.
+                                </p>
+                                <p className="text-gray-600 leading-relaxed text-lg">
+                                    Ankit's commitment to excellence drives him to continuously pursue new challenges and opportunities for the foundation to serve more effectively.
+                                </p>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </section>
+
+            {/* From Image: Challenges - (Kept at bottom or omitted if redundant, but here it is for completeness if needed again) */}
+            {/* ... Challenges section is structurally between hero and solutions usually, but can be skipped if "Aim to Scale Up" is the new focus. kept it previous file version. */}
 
             {/* Final CTA */}
             <section className="py-20 md:py-28 bg-primary-orange relative overflow-hidden text-center text-white">
