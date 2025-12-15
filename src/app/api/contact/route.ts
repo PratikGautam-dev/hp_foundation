@@ -30,9 +30,14 @@ export async function POST(req: Request) {
             },
         });
 
-        // 3. Send Email Notification (Mock implementation for now)
-        // In a real app, you would use Resend, SendGrid, etc.
-        console.log(`New contact form submission from ${validatedData.name}: ${validatedData.subject}`);
+        // 3. Send Email Notification (Mock implementation)
+        // In a real app, use Resend/SendGrid here
+
+        // Mock: Email to Admin
+        console.log(`[EMAIL_MOCK] To: admin@hpwf.org | Subject: New Inquiry from ${validatedData.name} | Body: ${validatedData.subject}`);
+
+        // Mock: Confirmation to User
+        console.log(`[EMAIL_MOCK] To: ${validatedData.email} | Subject: We received your message | Body: Hi ${validatedData.name}, thanks for contacting us...`);
 
         return NextResponse.json({
             success: true,
