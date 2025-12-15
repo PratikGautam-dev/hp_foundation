@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" // or "sqlite" if preferred for local dev, defaulting to postgresql for production readiness
+  url      = env("DATABASE_URL")
+}
+
+model Donation {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  name            String
+  email           String
+  phone           String
+  pan             String?
+  amount          Float
+  currency        String   @default("INR")
+  donationType    String   // "one-time" | "monthly"
+  cause           String?
+  transactionId   String   @unique
+  paymentStatus   String
+  paymentMethod   String
+  paymentGateway  String
+  message         String?
+  newsletter      Boolean  @default(false)
+  isAnonymous     Boolean  @default(false)
+}
+
+model Member {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  name            String
+  email           String   @unique
+  phone           String
+  dateOfBirth     DateTime?
+  gender          String?
+  address         String?
+  city            String?
+  state           String?
+  pincode         String?
+  membershipType  String
+  membershipDate  DateTime
+  status          String
+  occupation      String?
+  interests       String?
+  howDidYouHear   String?
+}
+
+model ContactForm {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  name      String
+  email     String
+  phone     String
+  subject   String
+  message   String
+  status    String   @default("new")
+}
+
+model VolunteerApplication {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  name            String
+  email           String
+  phone           String
+  age             Int
+  availability    String
+  skills          String
+  experience      String?
+  motivation      String
+  programInterest String
+  status          String   @default("pending")
+}

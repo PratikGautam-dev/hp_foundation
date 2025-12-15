@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors - Warm & Trustworthy */
+  --primary-orange: #FF6B35;
+  --primary-red: #D62828;
+  --accent-terracotta: #E76F51;
+
+  /* Secondary Colors - Calm & Professional */
+  --secondary-blue: #2A9D8F;
+  --secondary-green: #52B788;
+
+  /* Neutral Colors */
+  --background-light: #FEFAE0;
+  --background-white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-gray: #4A5568;
+  --border-gray: #E2E8F0;
+
+  /* Gradient for Donate Button */
+  --gradient-primary: linear-gradient(135deg, #FF6B35 0%, #D62828 100%);
+
+  /* Fonts */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  color: var(--text-dark);
+  background: var(--background-white);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
