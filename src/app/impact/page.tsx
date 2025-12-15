@@ -98,38 +98,38 @@ export default function ImpactPage() {
 
                     <div className="space-y-8">
                         {[
-                            { 
-                                category: "Elderly Care Facility Setup", 
+                            {
+                                category: "Elderly Care Facility Setup",
                                 purpose: "Building and maintaining safe homes for senior citizens",
                                 percent: 33,
                                 color: "bg-primary-orange"
                             },
-                            { 
-                                category: "Children's Welfare Programs", 
+                            {
+                                category: "Children's Welfare Programs",
                                 purpose: "Scholarships, uniforms, and educational supplies",
                                 percent: 20,
                                 color: "bg-primary-red"
                             },
-                            { 
-                                category: "Women Empowerment Initiatives", 
+                            {
+                                category: "Women Empowerment Initiatives",
                                 purpose: "Vocational training and small business grants",
                                 percent: 13,
                                 color: "bg-secondary-blue"
                             },
-                            { 
-                                category: "Community Outreach & Awareness", 
+                            {
+                                category: "Community Outreach & Awareness",
                                 purpose: "Health camps, hygiene drives, and local support",
                                 percent: 10,
                                 color: "bg-secondary-green"
                             },
-                            { 
-                                category: "Operational Costs", 
+                            {
+                                category: "Operational Costs",
                                 purpose: "Essential logistics, staff salaries, and administration",
                                 percent: 17,
                                 color: "bg-gray-500"
                             },
-                            { 
-                                category: "Digital Infrastructure", 
+                            {
+                                category: "Digital Infrastructure",
                                 purpose: "Online platforms and digital literacy resources",
                                 percent: 7,
                                 color: "bg-gray-400"
@@ -144,7 +144,7 @@ export default function ImpactPage() {
                                     <span className="font-bold text-2xl text-gray-900 ml-4">{item.percent}%</span>
                                 </div>
                                 <div className="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
-                                    <div 
+                                    <div
                                         className={`h-full rounded-full ${item.color} transition-all duration-1000 ease-out`}
                                         style={{ width: `${item.percent}%` }}
                                     ></div>
@@ -157,10 +157,12 @@ export default function ImpactPage() {
                         <p className="text-gray-500 mb-6 font-medium">
                             Detailed financial statements are available in our Annual Report.
                         </p>
-                        <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-black gap-2 px-8 py-6 rounded-full text-base font-semibold transition-all hover:scale-105 hover:shadow-md">
-                            <Download size={18} />
-                            Download Annual Report 2024
-                        </Button>
+                        <Link href="/HPWF-Annual-Report-2024.txt" download="HPWF-Annual-Report-2024.txt" target="_blank">
+                            <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-black gap-2 px-8 py-6 rounded-full text-base font-semibold transition-all hover:scale-105 hover:shadow-md">
+                                <Download size={18} />
+                                Download Annual Report 2024
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </section>

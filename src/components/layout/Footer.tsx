@@ -115,7 +115,7 @@ export default function Footer() {
 
                     {/* Column 4: Contact & Newsletter */}
                     <div className="space-y-6">
-                        <h3 className="text-xl font-heading font-bold mb-2 text-white relative inline-block">
+                        <h3 className="text-xl font-heading font-bold mb-6 text-white relative inline-block">
                             Contact Us
                             <span className="absolute -bottom-2 left-0 w-12 h-1 bg-primary-orange rounded-full"></span>
                         </h3>
