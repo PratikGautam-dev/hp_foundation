@@ -44,7 +44,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.8 }}
                     >
-                        Providing dignified care for the elderly, education for children, and empowerment for women in Samastipur, Bihar.
+                        Supporting vulnerable communities in Samastipur, Bihar through holistic care, education, and empowerment
                     </motion.p>
 
                     <motion.div
@@ -67,7 +67,7 @@ export default function Hero() {
                                 size="lg"
                                 className="w-full sm:w-auto px-8 py-6 text-lg font-semibold bg-transparent text-white border-2 border-white hover:bg-white hover:text-primary-orange hover:-translate-y-1 transition-all duration-300 rounded-full"
                             >
-                                Learn More
+                                Our Impact
                             </Button>
                         </Link>
                     </motion.div>
