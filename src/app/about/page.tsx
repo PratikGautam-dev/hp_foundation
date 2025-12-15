@@ -253,7 +253,7 @@ export default function AboutPage() {
                         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100 flex flex-col md:flex-row gap-10 items-center md:items-start">
                             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shrink-0 border-4 border-orange-100 shadow-md">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&fit=crop"
+                                    src="/images/team/founder.jpg"
                                     alt="Akshita Singh"
                                     width={400}
                                     height={400}
@@ -276,7 +276,7 @@ export default function AboutPage() {
                         <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100 flex flex-col md:flex-row-reverse gap-10 items-center md:items-start">
                             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shrink-0 border-4 border-blue-100 shadow-md">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&fit=crop"
+                                    src="/images/team/co-founder.jpg"
                                     alt="Ankit Raj"
                                     width={400}
                                     height={400}

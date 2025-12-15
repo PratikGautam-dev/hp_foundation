@@ -22,7 +22,7 @@ const pillars: Pillar[] = [
         title: 'Old Age Home',
         description: 'A safe, caring environment with medical support, recreational activities, and emotional well-being for elderly individuals.',
         icon: Heart,
-        image: 'https://images.unsplash.com/photo-1576765608535-2f905368319e?q=80&w=800&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=800&fit=crop',
         link: '/programs/elderly-care',
         color: 'bg-primary-red'
     },

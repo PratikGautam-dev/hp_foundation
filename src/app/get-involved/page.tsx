@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Heart, Handshake, Users, Mail, ArrowRight, CheckCircle } from 'lucide-react';
+import { Heart, Handshake, Users, Mail, ArrowRight, CheckCircle, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import VolunteerForm from '@/components/forms/VolunteerForm';
 
@@ -183,10 +183,10 @@ export default function GetInvolvedPage() {
                             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
                                 Reach out to our partnerships team to discuss how we can work together.
                             </p>
-                            <Link href="mailto:Singhakshita000@gmail.com">
+                            <Link href="mailto:HPWfoundation2025@gmail.com">
                                 <Button className="bg-white text-secondary-blue hover:bg-gray-100 text-lg px-8 py-6 rounded-full font-bold shadow-lg">
                                     <Mail className="mr-2" size={20} />
-                                    Email Us: Singhakshita000@gmail.com
+                                    Email Us: HPWfoundation2025@gmail.com
                                 </Button>
                             </Link>
                         </div>

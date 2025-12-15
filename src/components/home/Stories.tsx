@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Quote, ArrowRight } from 'lucide-react';
 
@@ -69,63 +70,71 @@ export default function Stories() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
-                            whileHover={{ y: -5, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
-                            className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col h-full relative group transition-shadow duration-300"
+                            className="relative group"
                         >
-                            <div className="absolute top-8 right-8 text-gray-100 group-hover:text-primary-orange/10 transition-colors duration-300">
+                            {/* Quote Icon - Outside Card */}
+                            <div className="absolute -top-4 -right-4 text-primary-orange/20 group-hover:text-primary-orange/40 transition-colors duration-300 z-10">
                                 <Quote size={64} fill="currentColor" />
                             </div>
 
-                            <div className="relative z-10 flex-grow">
-                                {/* Image */}
-                                <div className="mb-6 relative">
-                                    <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-md">
-                                        <Image
-                                            src={story.image}
-                                            alt={story.name}
-                                            width={80}
-                                            height={80}
-                                            className="object-cover w-full h-full"
-                                        />
+                            {/* Card */}
+                            <motion.div
+                                whileHover={{ y: -5, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
+                                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 flex flex-col h-full transition-shadow duration-300"
+                            >
+                                <div className="flex-grow">
+                                    {/* Image */}
+                                    <div className="mb-6 relative">
+                                        <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-md">
+                                            <Image
+                                                src={story.image}
+                                                alt={story.name}
+                                                width={80}
+                                                height={80}
+                                                className="object-cover w-full h-full"
+                                            />
+                                        </div>
                                     </div>
+
+                                    {/* Quote */}
+                                    <p className="text-gray-600 italic text-lg leading-relaxed mb-6 font-medium">
+                                        "{story.quote}"
+                                    </p>
                                 </div>
 
-                                {/* Quote */}
-                                <p className="text-gray-600 italic text-lg leading-relaxed mb-6 font-medium">
-                                    "{story.quote}"
-                                </p>
-                            </div>
-
-                            {/* Footer */}
-                            <div className="pt-6 border-t border-gray-100 relative z-10">
-                                <div className="flex flex-col gap-3">
-                                    <div>
-                                        <h4 className="font-heading font-bold text-lg text-gray-900">
-                                            {story.name}
-                                        </h4>
-                                        <p className="text-sm text-gray-500 font-medium">
-                                            {story.role}
-                                        </p>
+                                {/* Footer */}
+                                <div className="pt-6 border-t border-gray-100">
+                                    <div className="flex flex-col gap-3">
+                                        <div>
+                                            <h4 className="font-heading font-bold text-lg text-gray-900">
+                                                {story.name}
+                                            </h4>
+                                            <p className="text-sm text-gray-500 font-medium">
+                                                {story.role}
+                                            </p>
+                                        </div>
+                                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold w-fit border ${story.badgeColor}`}>
+                                            {story.program}
+                                        </span>
                                     </div>
-                                    <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold w-fit border ${story.badgeColor}`}>
-                                        {story.program}
-                                    </span>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     ))}
                 </div>
 
                 {/* Read More Button */}
                 <div className="text-center">
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="inline-flex items-center gap-2 px-8 py-3 bg-white border-2 border-primary-orange text-primary-orange rounded-full font-semibold hover:bg-primary-orange hover:text-white transition-all duration-300 shadow-md hover:shadow-lg"
-                    >
-                        Read More Stories
-                        <ArrowRight size={20} />
-                    </motion.button>
+                    <Link href="/stories">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-flex items-center gap-2 px-8 py-3 bg-white border-2 border-primary-orange text-primary-orange rounded-full font-semibold hover:bg-primary-orange hover:text-white transition-all duration-300 shadow-md hover:shadow-lg"
+                        >
+                            Read More Stories
+                            <ArrowRight size={20} />
+                        </motion.button>
+                    </Link>
                 </div>
             </div>
         </section>

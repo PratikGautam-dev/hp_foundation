@@ -13,7 +13,7 @@ const programs = [
         title: 'Elderly Care Program',
         description: 'Providing dignified living, medical support, and companionship for senior citizens who have no one else to turn to.',
         icon: Heart,
-        image: 'https://images.unsplash.com/photo-1534330207526-9e4e3b77da0f?q=80&w=800&fit=crop',
+        image: 'https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=800&fit=crop',
         color: 'bg-primary-red',
         textColor: 'text-primary-red'
     },

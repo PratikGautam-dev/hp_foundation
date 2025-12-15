@@ -12,7 +12,7 @@ export const siteConfig = {
         instagram: "https://instagram.com/hpwf",
     },
     contact: {
-        email: "Singhakshita000@gmail.com",
+        email: "HPWfoundation2025@gmail.com",
         phone: "+91-96615-99365",
         address: "Samastipur, Bihar, India",
     },

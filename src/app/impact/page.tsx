@@ -83,56 +83,84 @@ export default function ImpactPage() {
                 </div>
             </section>
 
-            {/* Fund Utilization Section - Updated from Image */}
-            <section className="py-16 md:py-24">
-                <div className="container mx-auto px-4 md:px-8 max-w-5xl">
-                    <div className="bg-gray-900 rounded-3xl p-8 md:p-16 text-white relative overflow-hidden">
-                        {/* Decorative background */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary-orange/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-red/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+            {/* Fund Utilization Section - Visual Allocation Layout */}
+            <section className="py-16 md:py-24 bg-white">
+                <div className="container mx-auto px-4 md:px-8 max-w-3xl">
+                    <div className="text-center mb-12">
+                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-3">
+                            Fund Utilization
+                        </h2>
+                        <p className="text-gray-600 text-lg">
+                            How every contribution is allocated to maximize impact
+                        </p>
+                        <div className="w-24 h-1.5 bg-gradient-to-r from-primary-orange to-primary-red mx-auto rounded-full mt-6"></div>
+                    </div>
 
-                        <div className="relative z-10">
-                            <div className="text-center mb-10">
-                                <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">Fund Utilization</h2>
-                                <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                                    We believe in complete transparency. Here is a detailed breakdown of how we allocate our resources.
-                                </p>
-                            </div>
-
-                            <div className="bg-white/10 backdrop-blur-md rounded-xl overflow-hidden border border-white/10 mb-10">
-                                <div className="grid grid-cols-2 bg-white/20 p-4 font-bold text-lg">
-                                    <div className="pl-4">Category</div>
-                                    <div className="text-right pr-4">Amount (₹)</div>
-                                </div>
-                                <div className="divide-y divide-white/10">
-                                    {[
-                                        { category: "Elderly Care Facility Setup", amount: "5,000,000" },
-                                        { category: "Children's Welfare Programs", amount: "3,000,000" },
-                                        { category: "Women Empowerment Initiatives", amount: "2,000,000" },
-                                        { category: "Community Outreach & Awareness", amount: "1,500,000" },
-                                        { category: "Operational Costs", amount: "2,500,000" },
-                                        { category: "Digital Infrastructure", amount: "1,000,000" },
-                                        { category: "Miscellaneous & Contingencies", amount: "500,000" },
-                                    ].map((row, idx) => (
-                                        <div key={idx} className="grid grid-cols-2 p-4 text-gray-200 hover:bg-white/5 transition-colors">
-                                            <div className="pl-4">{row.category}</div>
-                                            <div className="text-right pr-4 font-mono">{row.amount}</div>
-                                        </div>
-                                    ))}
-                                    <div className="grid grid-cols-2 p-4 font-bold text-xl bg-primary-orange/20 text-white">
-                                        <div className="pl-4">Total</div>
-                                        <div className="text-right pr-4">15,000,000</div>
+                    <div className="space-y-8">
+                        {[
+                            { 
+                                category: "Elderly Care Facility Setup", 
+                                purpose: "Building and maintaining safe homes for senior citizens",
+                                percent: 33,
+                                color: "bg-primary-orange"
+                            },
+                            { 
+                                category: "Children's Welfare Programs", 
+                                purpose: "Scholarships, uniforms, and educational supplies",
+                                percent: 20,
+                                color: "bg-primary-red"
+                            },
+                            { 
+                                category: "Women Empowerment Initiatives", 
+                                purpose: "Vocational training and small business grants",
+                                percent: 13,
+                                color: "bg-secondary-blue"
+                            },
+                            { 
+                                category: "Community Outreach & Awareness", 
+                                purpose: "Health camps, hygiene drives, and local support",
+                                percent: 10,
+                                color: "bg-secondary-green"
+                            },
+                            { 
+                                category: "Operational Costs", 
+                                purpose: "Essential logistics, staff salaries, and administration",
+                                percent: 17,
+                                color: "bg-gray-500"
+                            },
+                            { 
+                                category: "Digital Infrastructure", 
+                                purpose: "Online platforms and digital literacy resources",
+                                percent: 7,
+                                color: "bg-gray-400"
+                            }
+                        ].map((item, idx) => (
+                            <div key={idx}>
+                                <div className="flex justify-between items-end mb-2">
+                                    <div>
+                                        <h3 className="font-bold text-gray-900 text-lg">{item.category}</h3>
+                                        <p className="text-sm text-gray-500 font-medium">{item.purpose}</p>
                                     </div>
+                                    <span className="font-bold text-2xl text-gray-900 ml-4">{item.percent}%</span>
+                                </div>
+                                <div className="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
+                                    <div 
+                                        className={`h-full rounded-full ${item.color} transition-all duration-1000 ease-out`}
+                                        style={{ width: `${item.percent}%` }}
+                                    ></div>
                                 </div>
                             </div>
+                        ))}
+                    </div>
 
-                            <div className="text-center">
-                                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 gap-2 px-8 py-6 rounded-full text-lg font-semibold bg-transparent">
-                                    <Download size={20} />
-                                    Download Annual Report 2024
-                                </Button>
-                            </div>
-                        </div>
+                    <div className="mt-16 text-center border-t border-gray-100 pt-10">
+                        <p className="text-gray-500 mb-6 font-medium">
+                            Detailed financial statements are available in our Annual Report.
+                        </p>
+                        <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-black gap-2 px-8 py-6 rounded-full text-base font-semibold transition-all hover:scale-105 hover:shadow-md">
+                            <Download size={18} />
+                            Download Annual Report 2024
+                        </Button>
                     </div>
                 </div>
             </section>

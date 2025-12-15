@@ -49,7 +49,8 @@ export const PROGRAMS_DATA: Record<string, Program> = {
         id: 'elderly',
         title: 'Elderly Care Program',
         tagline: 'Providing dignified living and comprehensive care for our senior citizens',
-        heroImage: 'https://images.unsplash.com/photo-1534330207526-9e4e3b77da0f?q=80&w=1920&fit=crop',
+        heroImage: 'https://images.unsplash.com/photo-1576765608535-2f905368319e?q=80&w=1920&fit=crop', // Swapped valid ID if needed, but keeping original if actually valid. Wait, user said 404. I will swap.
+        heroImage: 'https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=1920&fit=crop', // New elderly care image
         overview: {
             heading: 'Honoring Our Seniors with Dignity and Care',
             content: [
@@ -84,7 +85,7 @@ export const PROGRAMS_DATA: Record<string, Program> = {
         story: {
             name: 'Ram Prasad',
             age: 75,
-            image: 'https://images.unsplash.com/photo-1533552971257-27e1fe97cece?q=80&w=800&fit=crop',
+            image: 'https://images.unsplash.com/photo-1510777551066-897b7740e53a?q=80&w=800&fit=crop', // New senior portrait
             story: 'After losing his wife and with his children settled abroad, Ram Prasad spent years in loneliness. Depression and declining health made everyday life a struggle. Since joining our elderly care program two years ago, Ram has found a new family.',
             quote: "I wake up with purpose now. This is the family I needed."
         },
