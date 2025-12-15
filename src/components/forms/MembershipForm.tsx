@@ -25,7 +25,7 @@ const membershipSchema = z.object({
 
     // Details
     membershipType: z.enum(['annual', 'lifetime', 'student'], {
-        errorMap: () => ({ message: "Please select a membership type" }),
+        message: "Please select a membership type",
     }),
     occupation: z.string().min(2, "Occupation is required"),
     interests: z.string().optional(),

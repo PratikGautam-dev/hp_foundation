@@ -8,8 +8,9 @@ import { ChevronRight, CheckCircle, ArrowRight } from 'lucide-react';
 import { PROGRAMS_DATA } from '@/lib/programs-data';
 import { Button } from '@/components/ui/button';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-    const program = PROGRAMS_DATA[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const program = PROGRAMS_DATA[slug];
     if (!program) return { title: 'Program Not Found' };
 
     return {
@@ -18,8 +19,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
 }
 
-export default function ProgramPage({ params }: { params: { slug: string } }) {
-    const program = PROGRAMS_DATA[params.slug];
+export default async function ProgramPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const program = PROGRAMS_DATA[slug];
 
     if (!program) {
         notFound();
