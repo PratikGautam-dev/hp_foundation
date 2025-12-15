@@ -34,14 +34,14 @@ const stats: StatItem[] = [
     {
         id: 3,
         label: "Women Empowered",
-        value: 300,
+        value: 800,
         suffix: "+",
         icon: Users,
         color: "text-secondary-blue"
     },
     {
         id: 4,
-        label: "Active Programs",
+        label: "Communities Reached",
         value: 50,
         suffix: "+",
         icon: HandHeart,
