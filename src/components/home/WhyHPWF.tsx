@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Users, SearchCheck, UserHeart, LucideIcon } from 'lucide-react';
+import { ShieldCheck, Users, SearchCheck, HeartHandshake, LucideIcon } from 'lucide-react';
 
 interface USP {
     id: string;
@@ -38,7 +38,7 @@ const usps: USP[] = [
         id: 'personalized',
         title: 'Personalized Care',
         description: 'From seniors to children, we provide individual attention and care tailored to specific needs.',
-        icon: UserHeart,
+        icon: HeartHandshake,
         color: 'bg-primary-red'
     }
 ];
