@@ -15,7 +15,7 @@ const volunteerSchema = z.object({
     phone: z.string().min(10, "Please enter a valid phone number"),
     age: z.coerce.number().min(16, "You must be at least 16 years old").max(100),
     availability: z.enum(["weekdays", "weekends", "flexible"], {
-        errorMap: () => ({ message: "Please select availability" }),
+        required_error: "Please select availability",
     }),
     skills: z.string().min(5, "Please list at least one skill"),
     experience: z.string().optional(),
@@ -38,17 +38,26 @@ export default function VolunteerForm() {
     const onSubmit = async (data: VolunteerFormData) => {
         setIsSubmitting(true);
         try {
-            // Simulation of API call
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            console.log('Volunteer Application:', data);
+            const response = await fetch('/api/volunteer/apply', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
 
-            // In real implementation:
-            // const response = await fetch('/api/volunteer/apply', { method: 'POST', body: JSON.stringify(data) ... });
+            const result = await response.json();
 
+            if (!response.ok) {
+                throw new Error(result.message || 'Failed to submit application');
+            }
+
+            console.log('✅ Volunteer application submitted:', result.applicationId);
             setIsSuccess(true);
             reset();
         } catch (error) {
-            console.error('Submission error:', error);
+            console.error('❌ Submission error:', error);
+            alert('Failed to submit application. Please try again.');
         } finally {
             setIsSubmitting(false);
         }
