@@ -129,9 +129,9 @@ export default function Footer() {
                                 <Phone className="w-5 h-5 text-primary-orange shrink-0" />
                                 <a href="tel:+919661599365" className="hover:text-white transition-colors">+91 96615 99365</a>
                             </li>
-                            <li className="flex items-center gap-3 text-gray-300">
-                                <Mail className="w-5 h-5 text-primary-orange shrink-0" />
-                                <a href="mailto:HPWfoundation2025@gmail.com" className="hover:text-white transition-colors break-all">HPWfoundation2025@gmail.com</a>
+                            <li className="flex items-start gap-3 text-gray-300">
+                                <Mail className="w-5 h-5 text-primary-orange shrink-0 mt-1" />
+                                <a href="mailto:HPWfoundation2025@gmail.com" className="hover:text-white transition-colors break-words">HPWfoundation2025@gmail.com</a>
                             </li>
                         </ul>
 
