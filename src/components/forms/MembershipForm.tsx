@@ -32,8 +32,8 @@ const membershipSchema = z.object({
     referralSource: z.string().min(1, "Please tell us how you heard about us"),
 
     // Terms
-    acceptTerms: z.literal(true, {
-        errorMap: () => ({ message: "You must accept the terms and conditions" }),
+    acceptTerms: z.boolean().refine((val) => val === true, {
+        message: "You must accept the terms and conditions",
     }),
 });
 
