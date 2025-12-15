@@ -16,7 +16,7 @@ const donationSchema = z.object({
     email: z.string().email("Please enter a valid email address"),
     phone: z.string().regex(/^\+91[6-9]\d{9}$/, "Please enter a valid Indian phone number (+91...)"),
     pan: z.string().optional().refine((val) => !val || /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(val), "Invalid PAN format"),
-    isAnonymous: z.boolean().default(false),
+    isAnonymous: z.boolean(),
 });
 
 type DonationFormData = z.infer<typeof donationSchema>;
@@ -160,42 +160,47 @@ export default function DonationForm({ onAmountChange }: DonationFormProps) {
                         </motion.div>
                     )}
 
-                    {step === 2 && (
-                        <motion.div
-                            key="step2"
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -20 }}
-                            className="space-y-6"
-                        >
-                            <h3 className="font-heading font-bold text-2xl text-gray-900">Choose a Cause</h3>
-                            <div className="space-y-3">
-                                {CAUSES.map((cause) => (
-                                    <label
-                                        key={cause.id}
-                                        className={cn(
-                                            "flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-all duration-200 hover:bg-gray-50",
-                                            currentCause === cause.id ? "border-primary-orange bg-primary-orange/5" : "border-gray-200"
-                                        )}
-                                    >
-                                        <input
-                                            type="radio"
-                                            value={cause.id}
-                                            {...register('cause')}
-                                            className="w-5 h-5 text-primary-orange focus:ring-primary-orange border-gray-300"
-                                        />
-                                        <div className={cn("p-2 rounded-full", currentCause === cause.id ? "bg-primary-orange text-white" : "bg-gray-100 text-gray-500")}>
-                                            <cause.icon size={20} />
-                                        </div>
-                                        <span className={cn("font-semibold text-lg", currentCause === cause.id ? "text-gray-900" : "text-gray-600")}>
+                    <motion.div
+                        key="step2"
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        className="space-y-6"
+                    >
+                        <h3 className="font-heading font-bold text-2xl text-gray-900">Choose a Cause</h3>
+                        <div className="space-y-3">
+                            <p className="text-gray-600 text-sm">Select the program you want your donation to support.</p>
+                            <div className="relative">
+                                <select
+                                    {...register('cause')}
+                                    className="w-full appearance-none bg-white border-2 border-gray-200 text-gray-900 text-lg rounded-xl px-4 py-4 pr-10 focus:outline-none focus:border-primary-orange focus:ring-4 focus:ring-primary-orange/10 transition-all cursor-pointer"
+                                >
+                                    <option value="" disabled>Select a cause...</option>
+                                    {CAUSES.map((cause) => (
+                                        <option key={cause.id} value={cause.id}>
                                             {cause.label}
-                                        </span>
-                                    </label>
-                                ))}
+                                        </option>
+                                    ))}
+                                </select>
+                                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                    <ChevronRight className="rotate-90" size={20} />
+                                </div>
                             </div>
-                            {errors.cause && <p className="text-red-500 text-sm font-medium">{errors.cause.message}</p>}
-                        </motion.div>
-                    )}
+                            <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 mt-4 flex items-start gap-3">
+                                <div className="p-2 bg-white rounded-full shadow-sm text-primary-orange shrink-0">
+                                    {(() => {
+                                        const selectedCause = CAUSES.find(c => c.id === currentCause);
+                                        const Icon = selectedCause ? selectedCause.icon : Heart;
+                                        return <Icon size={20} />;
+                                    })()}
+                                </div>
+                                <p className="text-sm text-gray-600 pt-1">
+                                    Your donation will be directed to <span className="font-semibold text-gray-900">{CAUSES.find(c => c.id === currentCause)?.label || 'the selected cause'}</span>.
+                                </p>
+                            </div>
+                        </div>
+                        {errors.cause && <p className="text-red-500 text-sm font-medium">{errors.cause.message}</p>}
+                    </motion.div>
 
                     {step === 3 && (
                         <motion.div
