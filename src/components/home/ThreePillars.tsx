@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Heart, GraduationCap, Users, ArrowRight, LucideIcon } from 'lucide-react';
@@ -72,11 +73,14 @@ export default function ThreePillars() {
                         >
                             {/* Image Header */}
                             <div className="relative h-64 overflow-hidden">
-                                <div
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                                    style={{ backgroundImage: `url(${pillar.image})` }}
+                                <Image
+                                    src={pillar.image}
+                                    alt={pillar.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
 
                                 {/* Floating Icon Badge */}
                                 <div className={`absolute bottom-0 right-6 translate-y-1/2 w-16 h-16 rounded-full ${pillar.color} text-white flex items-center justify-center shadow-lg`}>
