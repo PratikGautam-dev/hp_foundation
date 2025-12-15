@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Heart, Shield, Users, Lightbulb, ArrowRight, Quote } from 'lucide-react';
+import { Heart, Shield, Users, Lightbulb, ArrowRight, Quote, School, Stethoscope, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function AboutPage() {
@@ -45,12 +45,12 @@ export default function AboutPage() {
                         transition={{ delay: 0.2 }}
                         className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto"
                     >
-                        Service Towards Liberation. Dedicated to uplifting the most vulnerable members of our society in Samastipur, Bihar.
+                        Empowering Lives, Enriching Futures.
                     </motion.p>
                 </div>
             </section>
 
-            {/* Our Story Section */}
+            {/* From Image: About Us */}
             <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4 md:px-8 max-w-6xl">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -63,12 +63,11 @@ export default function AboutPage() {
                             <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative z-10">
                                 <Image
                                     src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?q=80&w=800&fit=crop"
-                                    alt="Akshita Singh, Founder"
+                                    alt="Child reading book"
                                     fill
                                     className="object-cover"
                                 />
                             </div>
-                            {/* Decorative element */}
                             <div className="absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-primary-orange/10 rounded-2xl -z-0"></div>
                         </motion.div>
 
@@ -77,22 +76,21 @@ export default function AboutPage() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-6">Our Story</h2>
+                            <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-6">About Us</h2>
                             <div className="w-20 h-1.5 bg-primary-orange rounded-full mb-8"></div>
 
                             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                                 <p>
-                                    Hira Prasad Welfare Foundation was founded by <span className="font-semibold text-gray-900">Akshita Singh</span> with a vision to uplift the most vulnerable members of our society. Growing up in Samastipur, Bihar, Akshita witnessed firsthand the challenges faced by elderly citizens left without care and children deprived of education.
+                                    Hira Prasad Welfare Foundation, based in <span className="font-semibold text-gray-900">Samastipur, Bihar</span>, is a non-profit organization founded by <span className="font-semibold text-gray-900">Akshita Singh</span> with a vision to uplift vulnerable communities.
                                 </p>
                                 <p>
-                                    What started as a personal calling has grown into a comprehensive welfare organization. Named in honor of values that emphasize service and compassion, our foundation operates on the principle that every individual—regardless of age, gender, or background—deserves to live a dignified life.
+                                    Our focus is on elderly care, children's welfare, and women's empowerment. We provide a safe and respectful environment for seniors, education, healthcare, and emotional support for children, and skills and resources for women.
                                 </p>
                                 <div className="bg-orange-50 p-6 rounded-xl border-l-4 border-primary-orange my-6">
                                     <Quote className="text-primary-orange mb-2 w-8 h-8" />
                                     <p className="italic text-gray-800 font-medium">
-                                        "We don't just provide aid; we build relationships. Every person we help becomes part of our extended family."
+                                        "Our mission is to create lasting change by empowering individuals to lead better lives. Through our initiatives, we strive for a more inclusive and equitable society where all can live with dignity and opportunity."
                                     </p>
-                                    <p className="text-sm font-bold text-gray-900 mt-2">— Akshita Singh, Founder</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -100,9 +98,14 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Mission & Vision */}
+            {/* From Image: Vision & Mission */}
             <section className="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
                 <div className="container mx-auto px-4 md:px-8 max-w-6xl relative z-10">
+                    <div className="text-center mb-12">
+                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Vision & Mission</h2>
+                        <div className="w-24 h-1.5 bg-gradient-to-r from-primary-orange to-primary-red mx-auto rounded-full"></div>
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Vision Card */}
                         <motion.div
@@ -114,7 +117,7 @@ export default function AboutPage() {
                             </div>
                             <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900">Our Vision</h3>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                To foster an inclusive society where every individual has the opportunity to live a dignified and fulfilling life, free from poverty and neglect.
+                                To foster an inclusive society where every individual has the opportunity to live a dignified and fulfilling life.
                             </p>
                         </motion.div>
 
@@ -128,49 +131,122 @@ export default function AboutPage() {
                             </div>
                             <h3 className="font-heading font-bold text-2xl mb-4 text-gray-900">Our Mission</h3>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                To empower vulnerable communities through elderly care, children's welfare, and women's empowerment, creating lasting social change through compassionate service.
+                                To empower vulnerable communities through elderly care, children's welfare, and women's empowerment, creating lasting social change.
                             </p>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* Core Values */}
+            {/* From Image: Challenges */}
+            <section className="py-16 md:py-24 bg-gray-900 text-white">
+                <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                            <Image
+                                src="https://images.unsplash.com/photo-1549488497-69b76cc5c229?q=80&w=800&fit=crop"
+                                alt="Rural challenges"
+                                fill
+                                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                            <div className="absolute bottom-6 left-6 right-6">
+                                <p className="text-white/80 italic">"Many senior citizens in rural areas face neglect... Underprivileged children often lack access..."</p>
+                            </div>
+                        </div>
+
+                        <div className="space-y-8">
+                            <div>
+                                <h2 className="font-heading font-bold text-3xl md:text-5xl mb-6">Challenges We Address</h2>
+                                <div className="w-24 h-1.5 bg-primary-orange rounded-full mb-8"></div>
+                            </div>
+
+                            <div className="space-y-6">
+                                {[
+                                    { title: "Lack of Elderly Care", desc: "Many senior citizens in rural areas face neglect and lack proper care, leading to isolation and poor quality of life." },
+                                    { title: "Limited Access to Education", desc: "Underprivileged children often lack access to quality education, hindering their future opportunities." },
+                                    { title: "Health Inequality", desc: "Marginalized communities, especially children, suffer from inadequate healthcare services and nutrition." },
+                                    { title: "Gender Inequality", desc: "Women in rural areas face barriers in education, employment, and social rights, limiting their empowerment." }
+                                ].map((challenge, idx) => (
+                                    <div key={idx} className="flex gap-4">
+                                        <div className="w-12 h-12 rounded-full bg-white/10 flex-shrink-0 flex items-center justify-center text-primary-orange font-bold">
+                                            {idx + 1}
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-xl mb-1">{challenge.title}</h3>
+                                            <p className="text-gray-400 leading-relaxed">{challenge.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* From Image: Our Solutions */}
             <section className="py-16 md:py-24">
                 <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                     <div className="text-center mb-16">
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">What Drives Us</h2>
+                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Our Solutions</h2>
                         <div className="w-24 h-1.5 bg-gradient-to-r from-primary-orange to-primary-red mx-auto rounded-full"></div>
+                        <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
+                            We implement targeted programs to address these challenges head-on.
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {[
-                            { title: "Compassion", desc: "Leading with empathy and understanding for all.", icon: Heart, color: "text-red-500 bg-red-50" },
-                            { title: "Integrity", desc: "Transparency and honesty in every action.", icon: Shield, color: "text-blue-500 bg-blue-50" },
-                            { title: "Community", desc: "Working together to create sustainable change.", icon: Users, color: "text-green-500 bg-green-50" },
-                            { title: "Empowerment", desc: "Helping individuals lead independent lives.", icon: Lightbulb, color: "text-yellow-500 bg-yellow-50" }
-                        ].map((value, idx) => (
+                            {
+                                title: "Elderly Care Facilities",
+                                desc: "Provide safe and supportive environments for senior citizens, ensuring proper care, companionship, and dignity.",
+                                icon: Heart,
+                                color: "bg-red-50 text-primary-red border-red-100"
+                            },
+                            {
+                                title: "Educational Support for Children",
+                                desc: "Offer free education, healthcare, and emotional support to empower underprivileged children for a better future.",
+                                icon: School,
+                                color: "bg-orange-50 text-primary-orange border-orange-100"
+                            },
+                            {
+                                title: "Health and Nutrition Programs",
+                                desc: "Deliver essential healthcare services and nutrition programs to improve the well-being of marginalized communities.",
+                                icon: Stethoscope,
+                                color: "bg-green-50 text-secondary-green border-green-100"
+                            },
+                            {
+                                title: "Women Empowerment Initiatives",
+                                desc: "Provide skill development, education, and resources to help women become financially independent and socially empowered.",
+                                icon: Briefcase,
+                                color: "bg-blue-50 text-secondary-blue border-blue-100"
+                            }
+                        ].map((solution, idx) => (
                             <motion.div
                                 key={idx}
                                 whileHover={{ y: -5 }}
-                                className="p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 bg-white text-center group"
+                                className={`p-8 rounded-2xl border-2 ${solution.color} transition-all duration-300 bg-white hover:shadow-xl`}
                             >
-                                <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${value.color} group-hover:scale-110 transition-transform`}>
-                                    <value.icon size={28} />
+                                <div className="flex items-start gap-6">
+                                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${solution.color.split(' ')[0]} ${solution.color.split(' ')[1]}`}>
+                                        <solution.icon size={28} />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-heading font-bold text-xl mb-3 text-gray-900">{solution.title}</h4>
+                                        <p className="text-gray-600 leading-relaxed">{solution.desc}</p>
+                                    </div>
                                 </div>
-                                <h4 className="font-heading font-bold text-xl mb-2 text-gray-900">{value.title}</h4>
-                                <p className="text-gray-600">{value.desc}</p>
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Team Section */}
+            {/* Team Section - Kept shorter or moved to bottom */}
             <section className="py-16 md:py-24 bg-gray-50">
                 <div className="container mx-auto px-4 md:px-8 max-w-6xl">
                     <div className="text-center mb-16">
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">The People Behind Our Mission</h2>
+                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">Leadership</h2>
                         <div className="w-24 h-1.5 bg-gradient-to-r from-primary-orange to-primary-red mx-auto rounded-full"></div>
                     </div>
 
@@ -190,10 +266,7 @@ export default function AboutPage() {
                             </div>
                             <div className="p-8 text-center">
                                 <h3 className="font-heading font-bold text-2xl text-gray-900 mb-1">Akshita Singh</h3>
-                                <p className="text-primary-orange font-medium mb-4">Founder & Director</p>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    The visionary behind HPWF. With a deep passion for social change, she has dedicated her life to uplifting marginalized communities in Samastipur.
-                                </p>
+                                <p className="text-primary-orange font-medium mb-4">Founder</p>
                             </div>
                         </motion.div>
 
@@ -213,9 +286,6 @@ export default function AboutPage() {
                             <div className="p-8 text-center">
                                 <h3 className="font-heading font-bold text-2xl text-gray-900 mb-1">Ankit Raj</h3>
                                 <p className="text-primary-orange font-medium mb-4">Co-Founder</p>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    Brings strategic leadership and innovation to HPWF. Ensures our programs remain efficient and aligned with our core values of service.
-                                </p>
                             </div>
                         </motion.div>
                     </div>
@@ -226,9 +296,9 @@ export default function AboutPage() {
             <section className="py-20 md:py-28 bg-primary-orange relative overflow-hidden text-center text-white">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
                 <div className="container mx-auto px-4 relative z-10">
-                    <h2 className="font-heading font-bold text-3xl md:text-5xl mb-6">Be a Part of Our Story</h2>
+                    <h2 className="font-heading font-bold text-3xl md:text-5xl mb-6">Join Our Mission</h2>
                     <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10">
-                        Together, we can create a future where everyone has the chance to thrive. Join us today.
+                        Together, we can create a future where everyone has the chance to thrive.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/donate">
@@ -238,7 +308,7 @@ export default function AboutPage() {
                         </Link>
                         <Link href="/volunteer">
                             <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-6 rounded-full font-bold w-full sm:w-auto bg-transparent">
-                                Volunteer With Us
+                                Volunteer
                             </Button>
                         </Link>
                     </div>
