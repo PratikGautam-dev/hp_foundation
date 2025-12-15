@@ -35,7 +35,9 @@
   }
 
   body {
-    @apply text-text-dark bg-background-white font-body;
+    color: var(--text-dark);
+    background-color: var(--background-white);
+    font-family: var(--font-body);
   }
 
   h1,
@@ -44,7 +46,7 @@
   h4,
   h5,
   h6 {
-    @apply font-heading;
+    font-family: var(--font-heading);
   }
 
   /* Custom Scrollbar */
