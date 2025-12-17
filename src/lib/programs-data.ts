@@ -49,7 +49,6 @@ export const PROGRAMS_DATA: Record<string, Program> = {
         id: 'elderly',
         title: 'Elderly Care Program',
         tagline: 'Providing dignified living and comprehensive care for our senior citizens',
-        heroImage: 'https://images.unsplash.com/photo-1576765608535-2f905368319e?q=80&w=1920&fit=crop', // Swapped valid ID if needed, but keeping original if actually valid. Wait, user said 404. I will swap.
         heroImage: 'https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=1920&fit=crop', // New elderly care image
         overview: {
             heading: 'Honoring Our Seniors with Dignity and Care',
