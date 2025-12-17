@@ -96,7 +96,7 @@ export async function POST(req: Request) {
 
     } catch (error) {
         if (error instanceof z.ZodError) {
-            return NextResponse.json({ success: false, error: "Invalid data", details: (error as z.ZodError).errors }, { status: 400 });
+            return NextResponse.json({ success: false, error: "Invalid data", details: error.issues }, { status: 400 });
         }
         console.error('Donation Error:', error);
         return NextResponse.json({ success: false, error: "Internal Server Error" }, { status: 500 });
