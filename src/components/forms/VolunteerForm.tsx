@@ -38,9 +38,9 @@ export default function VolunteerForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
-    // useForm Generic: Pass the inferred Type to useForm
-    // This aligns the Form State with Zod Schema
-    const { register, handleSubmit, reset, formState: { errors } } = useForm<VolunteerFormData>({
+    // Fix: Remove explicit generic <VolunteerFormData> to allow TS to infer 
+    // compatibility between Zod's Preprocess (unknown input) and Form (string/number)
+    const { register, handleSubmit, reset, formState: { errors } } = useForm({
         resolver: zodResolver(volunteerSchema),
         defaultValues: {
             age: undefined, // undefined allows empty field initially
