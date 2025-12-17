@@ -13,7 +13,13 @@ const volunteerSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email address"),
     phone: z.string().min(10, "Please enter a valid phone number"),
-    age: z.preprocess((val) => Number(val), z.number().min(16, "You must be at least 16 years old").max(100)),
+    // Root Cause Fix: Use z.preprocess for string->number, then clean z.number()
+    age: z.preprocess(
+        (val) => (val ? Number(val) : undefined),
+        z.number()
+            .min(16, "You must be at least 16 years old")
+            .max(100, "Maximum age is 100")
+    ),
     availability: z.enum(["weekdays", "weekends", "flexible"], {
         message: "Please select availability",
     }),
@@ -25,14 +31,20 @@ const volunteerSchema = z.object({
     programInterest: z.string().min(1, "Please select a program"),
 });
 
+// Type Inference: Automatically derive TS type from schema
 type VolunteerFormData = z.infer<typeof volunteerSchema>;
 
 export default function VolunteerForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
+    // useForm Generic: Pass the inferred Type to useForm
+    // This aligns the Form State with Zod Schema
     const { register, handleSubmit, reset, formState: { errors } } = useForm<VolunteerFormData>({
         resolver: zodResolver(volunteerSchema),
+        defaultValues: {
+            age: undefined, // undefined allows empty field initially
+        }
     });
 
     const onSubmit = async (data: VolunteerFormData) => {
