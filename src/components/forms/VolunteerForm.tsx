@@ -13,9 +13,9 @@ const volunteerSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email address"),
     phone: z.string().min(10, "Please enter a valid phone number"),
-    age: z.coerce.number().min(16, "You must be at least 16 years old").max(100),
+    age: z.preprocess((val) => Number(val), z.number().min(16, "You must be at least 16 years old").max(100)),
     availability: z.enum(["weekdays", "weekends", "flexible"], {
-        required_error: "Please select availability",
+        message: "Please select availability",
     }),
     skills: z.string().min(5, "Please list at least one skill"),
     experience: z.string().optional(),
