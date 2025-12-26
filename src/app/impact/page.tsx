@@ -109,8 +109,8 @@ export default function ImpactPage() {
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {[
-                                    { src: "/videos/blanket_disrtibution1.mp4", id: 1 },
-                                    { src: "/videos/blanket_disrtibution2.mp4", id: 2 }
+                                    { src: "/output/blanket_disrtibution1.mp4", id: 1 },
+                                    { src: "/output/blanket_disrtibution2.mp4", id: 2 }
                                 ].map((video) => (
                                     <div key={`blanket-${video.id}`} className="group">
                                         <div className="relative rounded-xl overflow-hidden shadow-md bg-gray-100 aspect-video">
@@ -144,9 +144,9 @@ export default function ImpactPage() {
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {[
-                                    { src: "/videos/food_distribution1.mp4", id: 1 },
-                                    { src: "/videos/food_distribution2.mp4", id: 2 },
-                                    { src: "/videos/food_distribution3.mp4", id: 3 }
+                                    { src: "/output/food_distribution1.mp4", id: 1 },
+                                    { src: "/output/food_distribution2.mp4", id: 2 },
+                                    { src: "/output/food_distribution3.mp4", id: 3 }
                                 ].map((video) => (
                                     <div key={`food-${video.id}`} className="group">
                                         <div className="relative rounded-xl overflow-hidden shadow-md bg-gray-100 aspect-video">
@@ -180,8 +180,8 @@ export default function ImpactPage() {
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {[
-                                    { src: "/videos/communirt_service1.mp4", id: 1 },
-                                    { src: "/videos/communirt_service2.mp4", id: 2 }
+                                    { src: "/output/communirt_service1.mp4", id: 1 },
+                                    { src: "/output/communirt_service2.mp4", id: 2 }
                                 ].map((video) => (
                                     <div key={`outreach-${video.id}`} className="group">
                                         <div className="relative rounded-xl overflow-hidden shadow-md bg-gray-100 aspect-video">
@@ -205,8 +205,6 @@ export default function ImpactPage() {
                     </div>
                 </div>
             </section>
-
-
 
             {/* Fund Utilization Section - Visual Allocation Layout */}
             <section className="py-16 md:py-24 bg-white">

@@ -20,6 +20,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hiraprasadfoundation.in'),
   title: "HPWF | Empowering Lives in Samastipur, Bihar",
   description: "Hira Prasad Welfare Foundation provides elderly care, children's welfare, and women's empowerment programs in Samastipur, Bihar.",
   keywords: ["NGO", "Samastipur", "Bihar", "Elderly Care", "Women Empowerment", "Child Welfare"],
