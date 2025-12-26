@@ -62,8 +62,8 @@ export default function AboutPage() {
                         >
                             <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative z-10">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?q=80&w=800&fit=crop"
-                                    alt="Child reading book"
+                                    src="/images/favicon.jpeg"
+                                    alt="Hira Prasad Welfare Foundation"
                                     fill
                                     className="object-cover"
                                 />
