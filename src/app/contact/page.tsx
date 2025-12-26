@@ -81,7 +81,7 @@ export default function ContactPage() {
     return (
         <main className="bg-white">
             {/* Hero Section */}
-            <section className="relative py-20 bg-gray-900 text-white overflow-hidden">
+            <section className="relative pt-32 pb-20 bg-gray-900 text-white overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="container mx-auto px-4 md:px-8 relative z-10 text-center">
                     <h1 className="font-heading font-bold text-4xl md:text-6xl mb-4">Get in Touch</h1>
