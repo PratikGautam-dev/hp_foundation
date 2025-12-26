@@ -83,6 +83,131 @@ export default function ImpactPage() {
                 </div>
             </section>
 
+            {/* Our Impact on the Ground - Videos Section */}
+            <section className="py-16 md:py-24 bg-white">
+                <div className="container mx-auto px-4 md:px-8 max-w-7xl">
+                    <div className="text-center mb-16">
+                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">
+                            Our Impact on the Ground
+                        </h2>
+                        <div className="w-24 h-1.5 bg-gradient-to-r from-primary-orange to-primary-red mx-auto rounded-full"></div>
+                        <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
+                            Witness the real-world change we are creating together.
+                        </p>
+                    </div>
+
+                    <div className="space-y-20">
+                        {/* 1. Winter Relief Drive */}
+                        <div>
+                            <div className="mb-8">
+                                <h3 className="font-heading font-bold text-2xl text-gray-900 mb-3 border-l-4 border-primary-orange pl-4">
+                                    Winter Relief Drive
+                                </h3>
+                                <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
+                                    During the winter months, our volunteers distribute warm blankets to elderly and homeless individuals, helping them stay protected from harsh cold conditions.
+                                </p>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {[
+                                    { src: "/videos/blanket_disrtibution1.mp4", id: 1 },
+                                    { src: "/videos/blanket_disrtibution2.mp4", id: 2 }
+                                ].map((video) => (
+                                    <div key={`blanket-${video.id}`} className="group">
+                                        <div className="relative rounded-xl overflow-hidden shadow-md bg-gray-100 aspect-video">
+                                            <video
+                                                controls
+                                                muted
+                                                preload="metadata"
+                                                className="w-full h-full object-cover"
+                                            >
+                                                <source src={video.src} type="video/mp4" />
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <p className="mt-3 text-sm text-gray-500 font-medium text-center italic">
+                                            “Blanket distribution during winter relief drive”
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* 2. Food Distribution Drives */}
+                        <div>
+                            <div className="mb-8">
+                                <h3 className="font-heading font-bold text-2xl text-gray-900 mb-3 border-l-4 border-primary-red pl-4">
+                                    Food Distribution Drives
+                                </h3>
+                                <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
+                                    Our food distribution drives aim to provide freshly prepared meals to individuals and families facing hunger, especially during late-night outreach programs.
+                                </p>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {[
+                                    { src: "/videos/food_distribution1.mp4", id: 1 },
+                                    { src: "/videos/food_distribution2.mp4", id: 2 },
+                                    { src: "/videos/food_distribution3.mp4", id: 3 }
+                                ].map((video) => (
+                                    <div key={`food-${video.id}`} className="group">
+                                        <div className="relative rounded-xl overflow-hidden shadow-md bg-gray-100 aspect-video">
+                                            <video
+                                                controls
+                                                muted
+                                                preload="metadata"
+                                                className="w-full h-full object-cover"
+                                            >
+                                                <source src={video.src} type="video/mp4" />
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <p className="mt-3 text-sm text-gray-500 font-medium text-center italic">
+                                            “Food distribution drive for the needy”
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* 3. Community Outreach */}
+                        <div>
+                            <div className="mb-8">
+                                <h3 className="font-heading font-bold text-2xl text-gray-900 mb-3 border-l-4 border-secondary-blue pl-4">
+                                    Community Outreach
+                                </h3>
+                                <p className="text-gray-600 text-lg leading-relaxed max-w-3xl">
+                                    Through regular community outreach initiatives, we engage directly with people in need, offering essential support, care, and dignity.
+                                </p>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {[
+                                    { src: "/videos/communirt_service1.mp4", id: 1 },
+                                    { src: "/videos/communirt_service2.mp4", id: 2 }
+                                ].map((video) => (
+                                    <div key={`outreach-${video.id}`} className="group">
+                                        <div className="relative rounded-xl overflow-hidden shadow-md bg-gray-100 aspect-video">
+                                            <video
+                                                controls
+                                                muted
+                                                preload="metadata"
+                                                className="w-full h-full object-cover"
+                                            >
+                                                <source src={video.src} type="video/mp4" />
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                        <p className="mt-3 text-sm text-gray-500 font-medium text-center italic">
+                                            “On-ground community outreach activity”
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
             {/* Fund Utilization Section - Visual Allocation Layout */}
             <section className="py-16 md:py-24 bg-white">
                 <div className="container mx-auto px-4 md:px-8 max-w-3xl">
