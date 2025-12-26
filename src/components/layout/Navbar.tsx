@@ -109,7 +109,7 @@ export default function Navbar() {
                             <Button
                                 className={cn(
                                     "bg-gradient-to-r from-primary-orange to-primary-red hover:shadow-lg text-white font-semibold transition-all duration-300",
-                                    isScrolled ? "px-6 py-2 text-sm" : "px-8 py-6 text-base"
+                                    isScrolled ? "px-6 py-2.5 text-sm" : "px-8 py-3 text-base"
                                 )}
                             >
                                 Donate Now

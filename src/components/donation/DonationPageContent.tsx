@@ -13,7 +13,7 @@ export default function DonationPageContent() {
     return (
         <main className="min-h-screen bg-gray-50 pb-20">
             {/* Hero Header */}
-            <section className="bg-gray-900 text-white py-16 relative overflow-hidden">
+            <section className="bg-gray-900 text-white pt-32 pb-16 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 z-0"></div>
                 <div className="absolute inset-0 z-0">
                     <Image
