@@ -24,7 +24,9 @@ export const metadata: Metadata = {
   description: "Hira Prasad Welfare Foundation provides elderly care, children's welfare, and women's empowerment programs in Samastipur, Bihar.",
   keywords: ["NGO", "Samastipur", "Bihar", "Elderly Care", "Women Empowerment", "Child Welfare"],
   icons: {
-    icon: "/favicon.ico",
+    icon: "/images/favicon.jpeg",
+    shortcut: "/images/favicon.jpeg",
+    apple: "/images/favicon.jpeg",
   },
 };
 
