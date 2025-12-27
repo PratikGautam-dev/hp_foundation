@@ -25,6 +25,7 @@
     "next": "16.0.10",
     "next-seo": "^7.0.1",
     "prisma": "^6.19.0",
+    "razorpay": "^2.9.6",
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "react-hook-form": "^7.68.0",

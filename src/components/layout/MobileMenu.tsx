@@ -42,7 +42,7 @@ const menuItems: MenuItem[] = [
         href: "/get-involved",
         children: [
             { label: "Donate", href: "/donate" },
-            { label: "Volunteer", href: "/get-involved#volunteer" },
+            { label: "Volunteer", href: "/volunteer" },
             { label: "Partner with Us", href: "/get-involved#partner" },
         ],
     },
