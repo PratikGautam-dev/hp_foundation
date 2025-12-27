@@ -29,6 +29,28 @@ export const metadata: Metadata = {
     shortcut: "/images/favicon.jpeg",
     apple: "/images/favicon.jpeg",
   },
+  openGraph: {
+    title: "HPWF | Empowering Lives in Samastipur, Bihar",
+    description: "Hira Prasad Welfare Foundation provides elderly care, children's welfare, and women's empowerment programs in Samastipur, Bihar.",
+    url: 'https://hiraprasadfoundation.in',
+    siteName: 'Hira Prasad Welfare Foundation',
+    images: [
+      {
+        url: '/images/favicon.jpeg',
+        width: 800,
+        height: 800,
+        alt: 'HPWF Logo',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "HPWF | Empowering Lives in Samastipur, Bihar",
+    description: "Hira Prasad Welfare Foundation provides elderly care, children's welfare, and women's empowerment programs in Samastipur, Bihar.",
+    images: ['/images/favicon.jpeg'],
+  },
 };
 
 export const viewport: Viewport = {
