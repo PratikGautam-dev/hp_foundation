@@ -94,7 +94,7 @@ export default function Navbar() {
                                     <div className="absolute top-full right-0 pt-2 w-48 animate-fade-in">
                                         <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-2">
                                             <Link href="/donate" className="block px-4 py-2 hover:bg-orange-50 hover:text-primary-orange text-sm font-medium text-gray-700 transition" onClick={() => setActiveDropdown(null)}>Donate</Link>
-                                            <Link href="/get-involved#volunteer" className="block px-4 py-2 hover:bg-orange-50 hover:text-primary-orange text-sm font-medium text-gray-700 transition" onClick={() => setActiveDropdown(null)}>Volunteer</Link>
+                                            <Link href="/volunteer" className="block px-4 py-2 hover:bg-orange-50 hover:text-primary-orange text-sm font-medium text-gray-700 transition" onClick={() => setActiveDropdown(null)}>Volunteer</Link>
                                             <Link href="/get-involved#partner" className="block px-4 py-2 hover:bg-orange-50 hover:text-primary-orange text-sm font-medium text-gray-700 transition" onClick={() => setActiveDropdown(null)}>Partner with Us</Link>
                                         </div>
                                     </div>
