@@ -123,19 +123,7 @@ export default function Stories() {
                     ))}
                 </div>
 
-                {/* Read More Button */}
-                <div className="text-center">
-                    <Link href="/stories">
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="inline-flex items-center gap-2 px-8 py-3 bg-white border-2 border-primary-orange text-primary-orange rounded-full font-semibold hover:bg-primary-orange hover:text-white transition-all duration-300 shadow-md hover:shadow-lg"
-                        >
-                            Read More Stories
-                            <ArrowRight size={20} />
-                        </motion.button>
-                    </Link>
-                </div>
+
             </div>
         </section>
     );

@@ -103,17 +103,17 @@ export default function MembershipForm() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                         <label className="text-sm font-semibold text-gray-900">First Name</label>
-                        <input {...register('firstName')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="John" />
+                        <input {...register('firstName')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="First Name" />
                         {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName.message}</p>}
                     </div>
                     <div className="space-y-2">
                         <label className="text-sm font-semibold text-gray-900">Last Name</label>
-                        <input {...register('lastName')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="Doe" />
+                        <input {...register('lastName')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="Last Name" />
                         {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName.message}</p>}
                     </div>
                     <div className="space-y-2">
                         <label className="text-sm font-semibold text-gray-900">Email</label>
-                        <input {...register('email')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="john@example.com" />
+                        <input {...register('email')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="name@example.com" />
                         {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
                     </div>
                     <div className="space-y-2">
@@ -128,7 +128,7 @@ export default function MembershipForm() {
                     </div>
                     <div className="space-y-2">
                         <label className="text-sm font-semibold text-gray-900">Occupation</label>
-                        <input {...register('occupation')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="Software Engineer" />
+                        <input {...register('occupation')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="Your Occupation" />
                         {errors.occupation && <p className="text-red-500 text-sm">{errors.occupation.message}</p>}
                     </div>
                 </div>
@@ -143,23 +143,23 @@ export default function MembershipForm() {
                 <div className="space-y-6">
                     <div className="space-y-2">
                         <label className="text-sm font-semibold text-gray-900">Address Line 1</label>
-                        <input {...register('addressLine1')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="123 Main St" />
+                        <input {...register('addressLine1')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="House No, Street, Locality" />
                         {errors.addressLine1 && <p className="text-red-500 text-sm">{errors.addressLine1.message}</p>}
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="space-y-2">
                             <label className="text-sm font-semibold text-gray-900">City</label>
-                            <input {...register('city')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="New York" />
+                            <input {...register('city')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="City" />
                             {errors.city && <p className="text-red-500 text-sm">{errors.city.message}</p>}
                         </div>
                         <div className="space-y-2">
                             <label className="text-sm font-semibold text-gray-900">State</label>
-                            <input {...register('state')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="NY" />
+                            <input {...register('state')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="State" />
                             {errors.state && <p className="text-red-500 text-sm">{errors.state.message}</p>}
                         </div>
                         <div className="space-y-2">
                             <label className="text-sm font-semibold text-gray-900">Pincode</label>
-                            <input {...register('pincode')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="10001" />
+                            <input {...register('pincode')} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange outline-none" placeholder="Pincode" />
                             {errors.pincode && <p className="text-red-500 text-sm">{errors.pincode.message}</p>}
                         </div>
                     </div>
