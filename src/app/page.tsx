@@ -3,7 +3,6 @@ import Hero from '@/components/home/Hero';
 import ImpactStats from '@/components/home/ImpactStats';
 import ThreePillars from '@/components/home/ThreePillars';
 import WhyHPWF from '@/components/home/WhyHPWF';
-import Stories from '@/components/home/Stories';
 import CTASection from '@/components/home/CTASection';
 
 export const metadata: Metadata = {
@@ -19,7 +18,6 @@ export default function Home() {
       <ImpactStats />
       <ThreePillars />
       <WhyHPWF />
-      <Stories />
       <CTASection />
     </main>
   );
