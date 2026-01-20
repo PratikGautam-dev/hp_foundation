@@ -3,8 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
-import ImpactStats from '@/components/home/ImpactStats';
-import Stories from '@/components/home/Stories';
 import { ArrowRight, Download, HandHeart, Trophy, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -35,8 +33,7 @@ export default function ImpactPage() {
                 </div>
             </section>
 
-            {/* Stats Section - Reusing Component */}
-            <ImpactStats />
+            {/* Stats Section - Removed */}
 
             {/* Deep Dive Metrics */}
             <section className="py-16 md:py-24 bg-gray-50">
@@ -290,8 +287,7 @@ export default function ImpactPage() {
                 </div>
             </section>
 
-            {/* Stories Section - Reusing Component */}
-            <Stories />
+            {/* Stories Section - Removed */}
 
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-br from-primary-orange to-primary-red text-white">

@@ -74,15 +74,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
                         </div>
                     </div>
 
-                    {/* Stats Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-                        {program.stats.map((stat, idx) => (
-                            <div key={idx} className="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-center hover:shadow-lg transition-all duration-300">
-                                <p className="text-4xl md:text-5xl font-bold text-primary-orange mb-2">{stat.value}</p>
-                                <p className="text-gray-600 font-medium tracking-wide">{stat.label}</p>
-                            </div>
-                        ))}
-                    </div>
+                    {/* Stats Grid - Removed */}
                 </div>
             </section>
 
@@ -108,34 +100,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
                 </div>
             </section>
 
-            {/* Impact Story */}
-            <section className="py-16 md:py-24">
-                <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-                    <div className="bg-orange-50 rounded-3xl overflow-hidden shadow-xl">
-                        <div className="grid grid-cols-1 lg:grid-cols-2">
-                            <div className="relative h-64 lg:h-auto min-h-[400px]">
-                                <Image
-                                    src={program.story.image}
-                                    alt={program.story.name}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div className="p-8 md:p-12 flex flex-col justify-center">
-                                <div className="uppercase tracking-widest text-xs font-bold text-primary-orange mb-4">Real Lives Changed</div>
-                                <h3 className="font-heading font-bold text-3xl text-gray-900 mb-6">Meet {program.story.name}</h3>
-                                <p className="text-gray-700 text-lg leading-relaxed italic mb-8 relative">
-                                    <span className="text-6xl text-primary-orange/20 absolute -top-6 -left-4 font-serif">"</span>
-                                    {program.story.story}
-                                </p>
-                                <p className="font-bold text-gray-900 pl-4 border-l-4 border-primary-orange">
-                                    — {program.story.quote}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-br from-primary-orange to-primary-red text-white">

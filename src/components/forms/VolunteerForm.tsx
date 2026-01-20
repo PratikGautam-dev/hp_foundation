@@ -109,7 +109,7 @@ export default function VolunteerForm() {
                     <input
                         {...register('name')}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange focus:border-transparent outline-none transition-all"
-                        placeholder="Jane Doe"
+                        placeholder="Enter your full name"
                     />
                     {errors.name && <p className="text-red-500 text-sm">{errors.name.message}</p>}
                 </div>
@@ -119,7 +119,7 @@ export default function VolunteerForm() {
                     <input
                         {...register('email')}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange focus:border-transparent outline-none transition-all"
-                        placeholder="jane@example.com"
+                        placeholder="name@example.com"
                     />
                     {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
                 </div>
@@ -140,7 +140,7 @@ export default function VolunteerForm() {
                         type="number"
                         {...register('age')}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange focus:border-transparent outline-none transition-all"
-                        placeholder="18"
+                        placeholder="e.g. 21"
                     />
                     {errors.age && <p className="text-red-500 text-sm">{errors.age.message}</p>}
                 </div>

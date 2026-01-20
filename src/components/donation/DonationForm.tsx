@@ -302,7 +302,7 @@ export default function DonationForm({ onAmountChange }: DonationFormProps) {
                                         <input
                                             {...register('name')}
                                             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange focus:border-transparent outline-none transition-all"
-                                            placeholder="John Doe"
+                                            placeholder="Enter your full name"
                                         />
                                         {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
                                     </div>
@@ -312,7 +312,7 @@ export default function DonationForm({ onAmountChange }: DonationFormProps) {
                                         <input
                                             {...register('email')}
                                             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-orange focus:border-transparent outline-none transition-all"
-                                            placeholder="john@example.com"
+                                            placeholder="name@example.com"
                                         />
                                         {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
                                     </div>
