@@ -74,15 +74,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
                         </div>
                     </div>
 
-                    {/* Stats Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-                        {program.stats.map((stat, idx) => (
-                            <div key={idx} className="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-center hover:shadow-lg transition-all duration-300">
-                                <p className="text-4xl md:text-5xl font-bold text-primary-orange mb-2">{stat.value}</p>
-                                <p className="text-gray-600 font-medium tracking-wide">{stat.label}</p>
-                            </div>
-                        ))}
-                    </div>
+                    {/* Stats Grid - Removed */}
                 </div>
             </section>
 

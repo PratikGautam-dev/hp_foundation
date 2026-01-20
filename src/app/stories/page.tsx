@@ -193,39 +193,7 @@ export default function StoriesPage() {
                 </div>
             </section>
 
-            {/* Impact Stats */}
-            <section className="py-16 md:py-24 bg-white">
-                <div className="container mx-auto px-4 md:px-8 max-w-5xl">
-                    <div className="text-center mb-12">
-                        <h2 className="font-heading font-bold text-3xl md:text-4xl text-gray-900 mb-4">
-                            Your Support Creates Stories
-                        </h2>
-                        <p className="text-gray-600 text-lg">
-                            Every donation, every volunteer hour, every act of kindness creates a new story of hope.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="text-center p-6 bg-orange-50 rounded-2xl border-2 border-primary-orange/20">
-                            <Users className="mx-auto mb-4 text-primary-orange" size={48} />
-                            <h3 className="font-heading font-bold text-4xl text-gray-900 mb-2">500+</h3>
-                            <p className="text-gray-600 font-medium">Lives Transformed</p>
-                        </div>
-
-                        <div className="text-center p-6 bg-blue-50 rounded-2xl border-2 border-secondary-blue/20">
-                            <BookOpen className="mx-auto mb-4 text-secondary-blue" size={48} />
-                            <h3 className="font-heading font-bold text-4xl text-gray-900 mb-2">1,200+</h3>
-                            <p className="text-gray-600 font-medium">Children Educated</p>
-                        </div>
-
-                        <div className="text-center p-6 bg-green-50 rounded-2xl border-2 border-secondary-green/20">
-                            <Sparkles className="mx-auto mb-4 text-secondary-green" size={48} />
-                            <h3 className="font-heading font-bold text-4xl text-gray-900 mb-2">300+</h3>
-                            <p className="text-gray-600 font-medium">Women Empowered</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Impact Stats - Removed */}
 
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-br from-primary-orange to-primary-red text-white">
